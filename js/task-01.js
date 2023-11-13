@@ -1,21 +1,22 @@
 
+// const categoriesList = document.getElementById("categories");
 
-const categoriesList = document.getElementById("#categories");
+// // console.log(categoriesList);
 
-// console.log(categoriesList);
-
-const listAnimals = document.querySelectorAll(".item")
-// console.log(listAnimals);
-
-console.log("Number of categories:", listAnimals.length);
-
+// const listAnimals = document.querySelectorAll(".item")
+// // console.log(listAnimals);
 const items = document.querySelectorAll("#categories .item");
 
 
+console.log("Number of categories:", items.length);
+
+
 items.forEach((item) => {
-    const textHiden = item.querySelector("h2").textContent;
-    const numberElements = item.querySelectorAll("li").length;
+    const textHiden = item.firstElementChild.textContent;
+    const numberElements = item.lastElementChild.children.length;
+
 
     console.log(`Categories: ${textHiden}`);
     console.log(`Elements: ${numberElements}`);
 });
+
