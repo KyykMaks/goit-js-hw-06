@@ -7,17 +7,17 @@ const ingredients = [
   'Condiments',
 ];
 
-const list = document.getElementById("ingredients");
+const listEL = document.getElementById("ingredients");
 
 
 
 
-list.append(...ingredients.map((ingredient) => {
+const markup = ingredients.map((ingredient) => {
   const listItem = document.createElement("li");
   listItem.textContent = ingredient;
   listItem.classList.add("item");
   return listItem
   
-}));
+});
 
-
+listEL.append(...markup);
